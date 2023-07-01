@@ -1,5 +1,5 @@
-const Project = require('../../models/projectModel');
-const Client = require('../../models/clientModel');
+const Project = require('../models/projectModel');
+const Client = require('../models/clientModel');
 
 
 const {
