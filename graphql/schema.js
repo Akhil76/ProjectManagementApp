@@ -25,6 +25,7 @@ const ClientType = new GraphQLObjectType({
 
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
+    description:'Root Query',
     fields:{
         clients:{
             type: new GraphQLList(ClientType),
@@ -34,6 +35,7 @@ const RootQuery = new GraphQLObjectType({
         },
         client:{
             type: ClientType,
+            args:{id:{type:GraphQLID}},
             resolve(parent,args){
                 return Client.findById(args.id);
             }
